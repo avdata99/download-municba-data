@@ -96,4 +96,4 @@ while next_data:
     
 
 logger.info(f'Finalizado: {datasets} datasets, {versiones} versiones y {recursos} recursos')
-logger.info(f'Icons {icons}')
+logger.info(f'Errores: {errores}')
