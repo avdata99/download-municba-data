@@ -10,6 +10,14 @@ Las llamadas API usadas para esta extracción son:
 
 Más sobre los datos [aquí](data.md).  
 
+## Requerimientos
+
+Se requiere python 3 y la'instalacion de los requerimientos
+
+```
+pip install -r requirements.txt
+```
+
 Descargar todo:
 
 ```
@@ -18,11 +26,13 @@ Downloading: https://gobiernoabierto.cordoba.gob.ar/api/datos-abiertos/ as json_
 
 ...
 
-Dataset: Zonas catastrales
- - Version: Zonas catastrales
-   - Recurso: SHP Zonas catastrales
-     + Icon: map
-     + URL: https://gobiernoabierto.cordoba.gob.ar/media/datos/zona.rar
+Dataset: Bono internacional
+ - Version: INFORME DE SALDOS Y APLICACIÓN DE FONDOS BONO INTERNACIONAL 2016 A ABRIL DE 2017
+   - Recurso: Anexos Informe Crédito Internacional
+     + Icon: xlsx
+     + URL: https://gobiernoabierto.cordoba.gob.ar/media/datos/Anexos_Informe_Credito_Internacional_A_Abrilvf.xlsx
+Downloading Bono internacional---INFORME DE SALDOS Y APLICACIÓN DE FONDOS BONO INTERNACIONAL 2016 A ABRIL DE 2017---Anexos Informe Crédito Internacional.xlsx from https://gobiernoabierto.cordoba.gob.ar/media/datos/Anexos_Informe_Credito_Internacional_A_Abrilvf.xlsx
+
 
 ...
 
