@@ -23,6 +23,7 @@ save_pages_to = 'json_pages'
 next_data = base_url + data_url
 
 full_datasets = []
+errores = []
 # los tipos de datos se infieren por el campo "icon" de los recursos
 icons = set()  # tipos de datos. Para saber si son descargables
 # no es exacto pero estos serían los descargables (otros son referencias a web externas, repositorios de github, etc)
@@ -78,15 +79,21 @@ while next_data:
                         logger.info(f'Already downloaded {no_unique_name} from {url}')
                         continue
                     logger.info(f'#### DOWNLOADING {no_unique_name} from {url}')
-                    data_response = requests.get(url, allow_redirects=True)
+                    try:
+                        data_response = requests.get(url, allow_redirects=True)
+                    except Exception as e:
+                        errores.append(f'Falló al descargar {url}: {no_unique_name}')
+                        continue
                     f = open(dest, 'wb')
                     f.write(data_response.content)
                     f.close()
+                
+                logger.info('###################')
+                logger.info(f'PAGINA {c}. Procesados: {datasets} datasets, {versiones} versiones y {recursos} recursos')
+                logger.info('###################')
 
     next_data = data['next']
-    logger.info('###################')
-    logger.info(f'Procesados: {datasets} datasets, {versiones} versiones y {recursos} recursos')
-    logger.info('###################')
+    
 
 logger.info(f'Finalizado: {datasets} datasets, {versiones} versiones y {recursos} recursos')
 logger.info(f'Icons {icons}')
