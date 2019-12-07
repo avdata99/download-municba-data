@@ -8,3 +8,24 @@ Las llamadas API usadas para esta extracción son:
 - Datos: https://gobiernoabierto.cordoba.gob.ar/api/datos-abiertos/
 - Categorías: https://gobiernoabierto.cordoba.gob.ar/api/categorias-datos-abiertos/
 
+Más sobre los datos [aquí](data.md).  
+
+Descargar todo:
+
+```
+python3 download.py 
+Downloading: https://gobiernoabierto.cordoba.gob.ar/api/datos-abiertos/ as json_pages/1.json ...
+
+...
+
+Dataset: Zonas catastrales
+ - Version: Zonas catastrales
+   - Recurso: SHP Zonas catastrales
+     + Icon: map
+     + URL: https://gobiernoabierto.cordoba.gob.ar/media/datos/zona.rar
+
+...
+
+Finalizado: 648 datasets, 2021 versiones y 6209 recursos
+
+```
