@@ -73,8 +73,8 @@ while next_data:
                 # ver si es algo decargable
                 if url and icon in allowed_download_icons:
                     # que lastima que no hay IDs ...
-                    no_unique_name = '{}---{}---{}.{}'.format(dataset['titulo'], version['titulo'], recurso['titulo'], icon)
-                    dest = 'data/{}'.format(slugify(no_unique_name))
+                    no_unique_name = '{}---{}---{}'.format(dataset['titulo'], version['titulo'], recurso['titulo'])
+                    dest = 'data/{}.{}'.format(slugify(no_unique_name), icon)
                     if os.path.isfile(dest):
                         logger.info(f'Already downloaded {no_unique_name} from {url}')
                         continue
